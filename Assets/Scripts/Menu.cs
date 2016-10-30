@@ -39,7 +39,7 @@ public class Menu : MonoBehaviour {
 	}
 
 	public void PlaySelected() {
-		SceneManager.LoadScene (""); // carregar jogo(colocar o nome da cena como parametro)
+		SceneManager.LoadScene ("scene"); // carregar jogo(colocar o nome da cena como parametro)
 		Music.FadeOut();
 		VolumeC.SaveVolume ();
 	}

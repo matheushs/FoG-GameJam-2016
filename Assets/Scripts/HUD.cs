@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class HUD : MonoBehaviour {
@@ -62,6 +63,7 @@ public class HUD : MonoBehaviour {
 
 	public void TryAgain() {
 		GameOver.SetActive (false);
+		SceneManager.LoadScene ("scene");
 		//iniciar o jogo de novo
 	}
 

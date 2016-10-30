@@ -181,7 +181,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 175536508}
   - 114: {fileID: 175536509}
-  - 114: {fileID: 175536511}
   m_Layer: 0
   m_Name: Sounds
   m_TagString: Untagged
@@ -221,19 +220,6 @@ MonoBehaviour:
   Master: {fileID: 1853062358}
   volumeM: {fileID: 303366364}
   volumeE: {fileID: 1379255812}
---- !u!114 &175536511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11472370, guid: ac8bd4167a98baf4b84ec13461ef836f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 175536507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a611a7be5fb159149888705d00fd4e96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Music: {fileID: 1725594826}
 --- !u!114 &303366364 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11454958, guid: c4a29e1e463e3b6429d1d6717de32d2a,
@@ -343,7 +329,7 @@ Prefab:
     - target: {fileID: 11423318, guid: c4a29e1e463e3b6429d1d6717de32d2a, type: 2}
       propertyPath: Music
       value: 
-      objectReference: {fileID: 175536511}
+      objectReference: {fileID: 1725594827}
     - target: {fileID: 11423318, guid: c4a29e1e463e3b6429d1d6717de32d2a, type: 2}
       propertyPath: VolumeC
       value: 
@@ -388,6 +374,26 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 11475488, guid: c4a29e1e463e3b6429d1d6717de32d2a, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475488, guid: c4a29e1e463e3b6429d1d6717de32d2a, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475488, guid: c4a29e1e463e3b6429d1d6717de32d2a, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1725594826}
+    - target: {fileID: 11475488, guid: c4a29e1e463e3b6429d1d6717de32d2a, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Pause
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475488, guid: c4a29e1e463e3b6429d1d6717de32d2a, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4a29e1e463e3b6429d1d6717de32d2a, type: 2}
   m_IsPrefabParent: 0
@@ -406,6 +412,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1725594825}
   - 82: {fileID: 1725594826}
+  - 114: {fileID: 1725594827}
   m_Layer: 0
   m_Name: MenuMusic
   m_TagString: Untagged
@@ -436,7 +443,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4ada389f89b41d844b8c6ada3a8e4602, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c77d33dc462f07541891fe3ad0df4b69, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -501,6 +508,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1725594827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1725594824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a611a7be5fb159149888705d00fd4e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Music: {fileID: 1725594826}
 --- !u!114 &1853062358 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11419564, guid: c4a29e1e463e3b6429d1d6717de32d2a,
