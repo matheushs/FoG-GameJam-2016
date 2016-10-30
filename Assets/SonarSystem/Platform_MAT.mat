@@ -129,13 +129,13 @@ Material:
       second: 0
     - first:
         name: _WaveFade0
-      second: 0.19681072
+      second: 0.3667913
     - first:
         name: _WaveFade1
-      second: 0.9997029
+      second: 0.9997649
     - first:
         name: _WaveFade2
-      second: 1.000221
+      second: 0.99970275
     - first:
         name: _WaveFade3
       second: 0.9997
@@ -193,7 +193,7 @@ Material:
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _WavePosTime0
-      second: {r: 164.02486, g: 1.0039829, b: 0, a: 15.116722}
+      second: {r: 276.81348, g: -1482.0969, b: 0, a: 14.14929}
     - first:
         name: _WavePosTime1
       second: {r: 0, g: 0, b: 0, a: 0}

@@ -14,6 +14,8 @@ public class LevelGen : MonoBehaviour {
 	public int offset = 3;
 	public GameObject parede;
 	public GameObject chao;
+	public GameObject caixa;
+	public GameObject spike;
 	private Noise noise;
 	private int lastHeight;
 
@@ -38,12 +40,12 @@ public class LevelGen : MonoBehaviour {
 
 				Instantiate (chao, new Vector3(level.x+i,height-1,0), Quaternion.identity);
 			} else if (obj == Obstaculo.BOX) {
-				//TODO implementar box
+				Instantiate (caixa, new Vector3(level.x + i,height,0), Quaternion.identity);
 
 				Instantiate (chao, new Vector3(level.x+i,height-1,0), Quaternion.identity);
 			} else if (obj == Obstaculo.HOLE) {
 			} else if (obj == Obstaculo.SPIKE) {
-				//TODO implementar spike
+				Instantiate (spike, new Vector3(level.x + i,height,0), Quaternion.identity);
 
 				Instantiate (chao, new Vector3(level.x+i,height-1,0), Quaternion.identity);
 			}
@@ -111,7 +113,7 @@ public class LevelGen : MonoBehaviour {
 		}
 		for (int i = offset; i < lvlsize - 1; i++) {
 			if (lvl.heights [i - 1] == lvl.heights [i] && lvl.heights [i] == lvl.heights [i + 1]) {
-				float prob = 0.5f - 1f / level;
+				float prob = 0.3f - 1f / (level+3);
 
 				if (Random.Range (0f, 1f) < prob) {
 					int t = Random.Range (0, possibleObstacles.Count);
