@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
 public class Menu : MonoBehaviour {
@@ -20,6 +21,7 @@ public class Menu : MonoBehaviour {
 
 	private EventSystem ES;
 	public PlaySceneMusic Music;
+	public VolumeControl VolumeC;
 
 	void Update() {
 		ES = EventSystem.current;
@@ -37,7 +39,9 @@ public class Menu : MonoBehaviour {
 	}
 
 	public void PlaySelected() {
-		Application.LoadLevel(1); // carregar jogo(trocar Game pelo nome da scene)
+		SceneManager.LoadScene (""); // carregar jogo(colocar o nome da cena como parametro)
+		Music.FadeOut();
+		VolumeC.SaveVolume ();
 	}
 
 	public void ConfigSelected() {
@@ -53,6 +57,7 @@ public class Menu : MonoBehaviour {
 	}
 
 	public void ExitSelected() {
+		VolumeC.SaveVolume ();
 		Application.Quit ();
 	}
 

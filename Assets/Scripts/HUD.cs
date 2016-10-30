@@ -17,9 +17,16 @@ public class HUD : MonoBehaviour {
 	private int recorde;
 
 	void Start() {
-		num_partidas = 0;
-		recorde = 0;
-		setPontos (0);
+		if(PlayerPrefs.HasKey("pontos")) {
+			setPontos (PlayerPrefs.GetInt ("pontos"));
+			recorde = PlayerPrefs.GetInt ("recorde");
+			num_partidas = PlayerPrefs.GetInt ("num_partidas");
+
+		} else {
+			num_partidas = 0;
+			recorde = 0;
+			setPontos (0);
+		}
 	}
 
 	public void setPontos(int pts){
@@ -39,11 +46,23 @@ public class HUD : MonoBehaviour {
 	}
 
 	public void ShowGameOver() {
-		recorde++;
+		if(int.Parse(pontos.text) > recorde) recorde = int.Parse(pontos.text);
 		num_partidas++;
-		pontosGO.text = "" + pontos;
+
+		pontosGO.text = pontos.text;
 		recordeGO.text = "" + recorde;
 		partidasGO.text = "" + num_partidas;
+
+		PlayerPrefs.SetInt ("pontos", int.Parse(pontos.text));
+		PlayerPrefs.SetInt ("recorde", recorde);
+		PlayerPrefs.SetInt ("num_partidas", num_partidas);
+
+		GameOver.SetActive (true);
+	}
+
+	public void TryAgain() {
+		GameOver.SetActive (false);
+		//iniciar o jogo de novo
 	}
 
 }

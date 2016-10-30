@@ -6,26 +6,38 @@ using UnityEngine.UI;
 public class VolumeControl : MonoBehaviour {
 
 	public AudioSource Music;
-	public AudioSource Effect;
+	public AudioSource Effect1;
 
-	public Slider volumeM;  //volume de musica
-	public Slider volumeE;  // de efeitos
 	public Slider Master;   // volume de tudo
+	public Slider volumeM;  // volume de musica
+	public Slider volumeE;  // de efeitos
 
 	private float aux = 0.0f;
 	private float vM;
 	private float vE;
 
 	void Start() {
-		volumeM.value = 1;
-		volumeE.value = 1;
-		Master.value = 1;
+		
+		if (PlayerPrefs.HasKey ("MasterVolume")) {
+			Master.value = PlayerPrefs.GetFloat("MasterVolume");
+			volumeM.value = PlayerPrefs.GetFloat("MusicVolume");
+			volumeE.value = PlayerPrefs.GetFloat("EffectsVolume");
+
+		} else {
+			volumeM.value = 1;
+			volumeE.value = 1;
+			Master.value = 1;
+		}
+
 		VolumeFundo ();
 		VolumeActions ();
 
 	}
 
-	public void SaveMasterVolume(){
+	public void SaveVolume(){
+		PlayerPrefs.SetFloat("MasterVolume", aux);
+		PlayerPrefs.SetFloat("MusicVolume", vM);
+		PlayerPrefs.SetFloat("EffectsVolume", vE);
 
 	}
 
@@ -47,7 +59,7 @@ public class VolumeControl : MonoBehaviour {
 	}
 
 	private void setVolumeActions() {
-		Effect.volume = vE;
+		Effect1.volume = vE;
 
 	}
 
