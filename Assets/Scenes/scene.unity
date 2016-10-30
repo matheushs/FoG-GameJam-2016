@@ -294,9 +294,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1527481fc02824f7d94a2d259e351c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  batata: 0
+  obstacleLength: 20
+  offset: 3
   parede: {fileID: 180790, guid: dda4d182c37d6424291d5be4c5882b32, type: 2}
   chao: {fileID: 188094, guid: 750b3edb1d8d812458a5dfd76fdad560, type: 2}
+  caixa: {fileID: 180790, guid: dda4d182c37d6424291d5be4c5882b32, type: 2}
+  spike: {fileID: 180790, guid: dda4d182c37d6424291d5be4c5882b32, type: 2}
 --- !u!1 &1496227014
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,6 +355,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+  yellTimer: 40
   floorMask:
     serializedVersion: 2
     m_Bits: 256
