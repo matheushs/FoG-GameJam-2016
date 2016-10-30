@@ -19,12 +19,16 @@ public class CharacterController_BHV : MonoBehaviour {
     public float stepThickness;
     public AnimationCurve stepCurve;
 
+    public float yellTimer = 40f;
+    private float yellCounter;
+
     public LayerMask floorMask; //Mask: Floor
     public Rigidbody2D rigidbodyRef;
 
     void Start () {
         curSpeed = 0;
         stepTimer = 0;
+        yellCounter = yellTimer;
     }
 
 	void Update () {
@@ -43,14 +47,23 @@ public class CharacterController_BHV : MonoBehaviour {
             stepTimer -= stepPeriod;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space) && Physics2D.OverlapCircle((Vector2) transform.position + new Vector2(0f,-0.5f), 0.2f, floorMask)) {
             Debug.Log("Jump");
             rigidbodyRef.AddForce(transform.up * jumpForce);
         }
 
-        if (Input.GetKeyDown(KeyCode.E)) {
-            sonar.AddWave(new Wave(stepSpeed*2, stepRange*3, transform.position, stepThickness*2, stepCurve));
+        if(yellCounter == yellTimer) {
+            if (Input.GetKeyDown(KeyCode.E) && yellCounter == yellTimer) {
+                sonar.AddWave(new Wave(stepSpeed*2, stepRange*3, transform.position, stepThickness*2, stepCurve));
+                yellCounter = 0f;
+            }
+        } else {
+            yellCounter++;
         }
+
+        /*if (Input.GetKeyDown(KeyCode.S)) {
+            gameObject.GetComponent<CircleCollider2D>().
+        }*/
 	}
 
     bool IsGrounded() {
