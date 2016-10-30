@@ -129,16 +129,16 @@ Material:
       second: 0
     - first:
         name: _WaveFade0
-      second: 1.031106
+      second: 0.19681072
     - first:
         name: _WaveFade1
-      second: 1.0336243
+      second: 0.9997029
     - first:
         name: _WaveFade2
-      second: 1
+      second: 1.000221
     - first:
         name: _WaveFade3
-      second: 1
+      second: 0.9997
     - first:
         name: _WaveFade4
       second: 1
@@ -153,16 +153,16 @@ Material:
       second: 1
     - first:
         name: _WaveThick0
-      second: 9.06
+      second: 10
     - first:
         name: _WaveThick1
-      second: 9.06
+      second: 10
     - first:
         name: _WaveThick2
-      second: 1
+      second: 10
     - first:
         name: _WaveThick3
-      second: 1
+      second: 20
     - first:
         name: _WaveThick4
       second: 1
@@ -193,7 +193,7 @@ Material:
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _WavePosTime0
-      second: {r: 694.9951, g: -0.99904037, b: 0, a: 10.933987}
+      second: {r: 164.02486, g: 1.0039829, b: 0, a: 15.116722}
     - first:
         name: _WavePosTime1
       second: {r: 0, g: 0, b: 0, a: 0}

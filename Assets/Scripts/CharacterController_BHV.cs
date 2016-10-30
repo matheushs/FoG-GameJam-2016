@@ -47,6 +47,10 @@ public class CharacterController_BHV : MonoBehaviour {
             Debug.Log("Jump");
             rigidbodyRef.AddForce(transform.up * jumpForce);
         }
+
+        if (Input.GetKeyDown(KeyCode.E)) {
+            sonar.AddWave(new Wave(stepSpeed*2, stepRange*3, transform.position, stepThickness*2, stepCurve));
+        }
 	}
 
     bool IsGrounded() {

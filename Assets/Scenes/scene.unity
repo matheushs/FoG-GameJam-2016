@@ -151,7 +151,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8.039315
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -172,7 +172,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 258220998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: -10}
+  m_LocalPosition: {x: 11.11, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -328,32 +328,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7b73fd701bfa6458d35e273f0683e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 10
+  maxSpeed: 12
   acceleration: 50
   jumpForce: 10000
-  stepPeriod: 1
+  stepPeriod: 0.5
   sonar: {fileID: 258221004}
-  stepSpeed: 20
-  stepRange: 48
-  stepThickness: 9.06
+  stepSpeed: 30
+  stepRange: 16
+  stepThickness: 10
   stepCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
       value: 1
       inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 0.79114205
-      value: 0.9963843
-      inSlope: -0.039583657
-      outSlope: -0.039583657
-      tangentMode: 0
-    - time: 0.9914267
-      value: 0.000010298099
-      inSlope: -2.5322478
-      outSlope: -2.5322478
-      tangentMode: 0
+      outSlope: -0.025625907
+      tangentMode: 1
+    - time: 0.9996886
+      value: 0.018820567
+      inSlope: -3.4572875
+      outSlope: -3.7945848
+      tangentMode: 1
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
