@@ -12,6 +12,13 @@ public class CharacterController_BHV : MonoBehaviour {
     private float stepTimer;
     private bool isGrounded;
 
+    public SonarManager_BHV sonar;
+
+    public float stepSpeed;
+    public float stepRange;
+    public float stepThickness;
+    public AnimationCurve stepCurve;
+
     public LayerMask floorMask; //Mask: Floor
     public Rigidbody2D rigidbodyRef;
 
@@ -48,6 +55,7 @@ public class CharacterController_BHV : MonoBehaviour {
     
     void Step() {
         Debug.Log("Step");
+        sonar.AddWave(new Wave(stepSpeed, stepRange, transform.position, stepThickness, stepCurve));
     }
     
 

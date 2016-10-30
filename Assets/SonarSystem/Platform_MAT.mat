@@ -1,0 +1,217 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Platform_MAT
+  m_Shader: {fileID: 4800000, guid: 91d583ad96fa6ca4cbc7371254da96a4, type: 3}
+  m_ShaderKeywords: _EMISSION
+  m_LightmapFlags: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _BumpMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DetailAlbedoMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DetailMask
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DetailNormalMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _EmissionMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MetallicGlossMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _OcclusionMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _ParallaxMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _WaveGradient
+      second:
+        m_Texture: {fileID: 2800000, guid: 46fd3ed8723d2284ca660c2f96c74fae, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _AdditivePower
+      second: 1
+    - first:
+        name: _BumpScale
+      second: 1
+    - first:
+        name: _Cutoff
+      second: 0.5
+    - first:
+        name: _DetailNormalMapScale
+      second: 1
+    - first:
+        name: _DstBlend
+      second: 0
+    - first:
+        name: _GlossMapScale
+      second: 1
+    - first:
+        name: _Glossiness
+      second: 0.5
+    - first:
+        name: _GlossyReflections
+      second: 1
+    - first:
+        name: _Intensity
+      second: 1
+    - first:
+        name: _Metallic
+      second: 0
+    - first:
+        name: _Mode
+      second: 0
+    - first:
+        name: _OcclusionStrength
+      second: 1
+    - first:
+        name: _Parallax
+      second: 0.02
+    - first:
+        name: _SmoothnessTextureChannel
+      second: 0
+    - first:
+        name: _SpecularHighlights
+      second: 1
+    - first:
+        name: _SrcBlend
+      second: 1
+    - first:
+        name: _UVSec
+      second: 0
+    - first:
+        name: _WaveFade0
+      second: 1.031106
+    - first:
+        name: _WaveFade1
+      second: 1.0336243
+    - first:
+        name: _WaveFade2
+      second: 1
+    - first:
+        name: _WaveFade3
+      second: 1
+    - first:
+        name: _WaveFade4
+      second: 1
+    - first:
+        name: _WaveFade5
+      second: 1
+    - first:
+        name: _WaveFade6
+      second: 1
+    - first:
+        name: _WaveFade7
+      second: 1
+    - first:
+        name: _WaveThick0
+      second: 9.06
+    - first:
+        name: _WaveThick1
+      second: 9.06
+    - first:
+        name: _WaveThick2
+      second: 1
+    - first:
+        name: _WaveThick3
+      second: 1
+    - first:
+        name: _WaveThick4
+      second: 1
+    - first:
+        name: _WaveThick5
+      second: 1
+    - first:
+        name: _WaveThick6
+      second: 1
+    - first:
+        name: _WaveThick7
+      second: 1
+    - first:
+        name: _ZWrite
+      second: 1
+    m_Colors:
+    - first:
+        name: _AdditiveCOlor
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _EmissionColor
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _MainColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _WavePosTime0
+      second: {r: 694.9951, g: -0.99904037, b: 0, a: 10.933987}
+    - first:
+        name: _WavePosTime1
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _WavePosTime2
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _WavePosTime3
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _WavePosTime4
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _WavePosTime5
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _WavePosTime6
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _WavePosTime7
+      second: {r: 0, g: 0, b: 0, a: 0}

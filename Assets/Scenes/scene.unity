@@ -102,6 +102,7 @@ GameObject:
   - 92: {fileID: 258221001}
   - 124: {fileID: 258221000}
   - 81: {fileID: 258220999}
+  - 114: {fileID: 258221004}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -139,7 +140,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -177,6 +178,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1496227020}
   m_RootOrder: 0
+--- !u!114 &258221004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258220998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc959c62b21fd04dae93f512c7dc23d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  affectedMaterials:
+  - {fileID: 2100000, guid: f95b778cf385ae347809179779751913, type: 2}
 --- !u!1 &308231779
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,9 +307,9 @@ GameObject:
   - 4: {fileID: 1496227020}
   - 33: {fileID: 1496227019}
   - 23: {fileID: 1496227018}
-  - 61: {fileID: 1496227017}
   - 50: {fileID: 1496227016}
   - 114: {fileID: 1496227015}
+  - 58: {fileID: 1496227017}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -314,10 +328,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7b73fd701bfa6458d35e273f0683e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 25
+  maxSpeed: 10
   acceleration: 50
   jumpForce: 10000
   stepPeriod: 1
+  sonar: {fileID: 258221004}
+  stepSpeed: 20
+  stepRange: 48
+  stepThickness: 9.06
+  stepCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 0.79114205
+      value: 0.9963843
+      inSlope: -0.039583657
+      outSlope: -0.039583657
+      tangentMode: 0
+    - time: 0.9914267
+      value: 0.000010298099
+      inSlope: -2.5322478
+      outSlope: -2.5322478
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
   floorMask:
     serializedVersion: 2
     m_Bits: 256
@@ -339,8 +378,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &1496227017
-BoxCollider2D:
+--- !u!58 &1496227017
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -352,7 +391,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Radius: 0.5
 --- !u!23 &1496227018
 MeshRenderer:
   m_ObjectHideFlags: 0
