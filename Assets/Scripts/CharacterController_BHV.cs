@@ -78,7 +78,11 @@ public class CharacterController_BHV : MonoBehaviour {
 
 
     void OnCollisionEnter2D(Collision2D coll) {
-        
+        if(coll.gameObject.name == "Bawks") {
+            coll.gameObject.GetComponent<Bawks_BHV>().StartAnimation();
+            Debug.Log("COLIDIU COM CAIXA");
+            rigidbodyRef.AddForce((transform.right * -1) * (acceleration/2));
+        }
     }
 
     void OnCollisionExit2D(Collision2D coll) {

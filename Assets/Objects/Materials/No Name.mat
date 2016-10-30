@@ -6,10 +6,10 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Platform_MAT
-  m_Shader: {fileID: 4800000, guid: 91d583ad96fa6ca4cbc7371254da96a4, type: 3}
-  m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 1
+  m_Name: No Name
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
@@ -69,16 +69,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _WaveGradient
-      second:
-        m_Texture: {fileID: 2800000, guid: 46fd3ed8723d2284ca660c2f96c74fae, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - first:
-        name: _AdditivePower
-      second: 1
     - first:
         name: _BumpScale
       second: 1
@@ -99,9 +90,6 @@ Material:
       second: 0.5
     - first:
         name: _GlossyReflections
-      second: 1
-    - first:
-        name: _Intensity
       second: 1
     - first:
         name: _Metallic
@@ -128,90 +116,12 @@ Material:
         name: _UVSec
       second: 0
     - first:
-        name: _WaveFade0
-      second: 1.0051398
-    - first:
-        name: _WaveFade1
-      second: 1.0002104
-    - first:
-        name: _WaveFade2
-      second: 1.000265
-    - first:
-        name: _WaveFade3
-      second: 0.9997
-    - first:
-        name: _WaveFade4
-      second: 1
-    - first:
-        name: _WaveFade5
-      second: 1
-    - first:
-        name: _WaveFade6
-      second: 1
-    - first:
-        name: _WaveFade7
-      second: 1
-    - first:
-        name: _WaveThick0
-      second: 10
-    - first:
-        name: _WaveThick1
-      second: 10
-    - first:
-        name: _WaveThick2
-      second: 10
-    - first:
-        name: _WaveThick3
-      second: 20
-    - first:
-        name: _WaveThick4
-      second: 1
-    - first:
-        name: _WaveThick5
-      second: 1
-    - first:
-        name: _WaveThick6
-      second: 1
-    - first:
-        name: _WaveThick7
-      second: 1
-    - first:
         name: _ZWrite
       second: 1
     m_Colors:
-    - first:
-        name: _AdditiveCOlor
-      second: {r: 0, g: 0, b: 0, a: 1}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
-    - first:
-        name: _MainColor
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _WavePosTime0
-      second: {r: 57.995, g: 2.0009592, b: 0, a: 3.974658}
-    - first:
-        name: _WavePosTime1
-      second: {r: 0, g: 0, b: 0, a: 0}
-    - first:
-        name: _WavePosTime2
-      second: {r: 0, g: 0, b: 0, a: 0}
-    - first:
-        name: _WavePosTime3
-      second: {r: 0, g: 0, b: 0, a: 0}
-    - first:
-        name: _WavePosTime4
-      second: {r: 0, g: 0, b: 0, a: 0}
-    - first:
-        name: _WavePosTime5
-      second: {r: 0, g: 0, b: 0, a: 0}
-    - first:
-        name: _WavePosTime6
-      second: {r: 0, g: 0, b: 0, a: 0}
-    - first:
-        name: _WavePosTime7
-      second: {r: 0, g: 0, b: 0, a: 0}
