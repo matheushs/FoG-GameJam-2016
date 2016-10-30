@@ -12,14 +12,17 @@ public class VolumeControl : MonoBehaviour {
 	public Slider volumeM;  // volume de musica
 	public Slider volumeE;  // de efeitos
 
-	private float aux = 0.0f;
+	private float aux;
 	private float vM;
 	private float vE;
 
 	void Start() {
+
+		//PlayerPrefs.DeleteAll ();
 		
 		if (PlayerPrefs.HasKey ("MasterVolume")) {
 			Master.value = PlayerPrefs.GetFloat("MasterVolume");
+			aux = PlayerPrefs.GetFloat("MasterVolume");
 			volumeM.value = PlayerPrefs.GetFloat("MusicVolume");
 			volumeE.value = PlayerPrefs.GetFloat("EffectsVolume");
 
@@ -27,6 +30,8 @@ public class VolumeControl : MonoBehaviour {
 			volumeM.value = 1;
 			volumeE.value = 1;
 			Master.value = 1;
+
+			aux = 1;
 		}
 
 		VolumeFundo ();
@@ -35,9 +40,9 @@ public class VolumeControl : MonoBehaviour {
 	}
 
 	public void SaveVolume(){
-		PlayerPrefs.SetFloat("MasterVolume", aux);
-		PlayerPrefs.SetFloat("MusicVolume", vM);
-		PlayerPrefs.SetFloat("EffectsVolume", vE);
+		PlayerPrefs.SetFloat("MasterVolume", Master.value);
+		PlayerPrefs.SetFloat("MusicVolume", volumeM.value);
+		PlayerPrefs.SetFloat("EffectsVolume", volumeE.value);
 
 	}
 

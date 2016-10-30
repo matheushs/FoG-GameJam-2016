@@ -10,6 +10,12 @@ public class PlaySceneMusic : MonoBehaviour {
 	private int i;
 	private int aux;
 
+	void Start() {
+		if (PlayerPrefs.HasKey ("MasterVolume"))
+			Music.volume = PlayerPrefs.GetFloat ("MasterVolume") * PlayerPrefs.GetFloat ("MusicVolume");
+		else Music.volume = 1;
+	}
+		
 	public IEnumerator FadeOut(){
 		aux = (int)(Music.volume * 10);
 		
